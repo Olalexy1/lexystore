@@ -72,7 +72,7 @@ const Header = () => {
                 <ul className='header-links-left' style={{ fontSize: "12px" }}>
                     <li><NextLink href="#">USD</NextLink>
                         <ExpandMoreIcon className='expand-icon' />
-                        <ul className="submenu" id="submenu1" style={theme.palette.mode === "dark" ? { backgroundColor: '#262626' } : { backgroundColor: '#F5F5F5' }}>
+                        <ul className="submenu" id="submenu1">
                             <li>NAIRA</li>
                             <li>AED</li>
                             <li>EURO</li>
@@ -81,7 +81,7 @@ const Header = () => {
                     </li>
                     <li><NextLink href="#">English</NextLink>
                         <ExpandMoreIcon className='expand-icon' />
-                        <ul className="submenu" id="submenu2" style={theme.palette.mode === "dark" ? { backgroundColor: '#262626' } : { backgroundColor: '#F5F5F5' }}>
+                        <ul className="submenu" id="submenu2">
                             <li>Spanish</li>
                             <li>French</li>
                             <li>Yoruba</li>

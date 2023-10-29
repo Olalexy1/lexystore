@@ -18,11 +18,11 @@ const Hero = () => {
       <Image
         src={HeroImg}
         alt="Logo"
-        width={547}
         className='hero-img'
+        style={isMediumScreen ? { width: '50vw'} : { width: '38vw' }}
       />
 
-      <div className='deal-container'>
+      <div className='deal-container'  style={ isMediumScreen ? { display: 'none' } : isSmallScreen ? { display: 'none' } : {}}>
         <div>
           <p >
             Summer Essentials
