@@ -2,7 +2,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Logo } from '@/util/image';
 import Image from 'next/image';
-import { Box, IconButton, useTheme, Typography, useMediaQuery } from "@mui/material";
+import { Box, IconButton, useTheme, Typography, useMediaQuery, Stack } from "@mui/material";
 import { ColorModeContext, tokens } from '@/theme';
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -113,9 +113,9 @@ const NavBar = () => {
                             </Paper>
                         </Box>
 
-                        <Box display={'flex'} flexDirection={'row'} alignItems={'center'} border={'1px solid blue'} justifyContent={'space-between'} flex={1}>
+                        <Box display={'flex'} flexDirection={'row'} alignItems={'center'} flex={1}>
                             <div className="nav-items-container">
-                                <ul className="nav-items">
+                                <ul className="nav-items" style={isLargeScreen ? { justifyContent: 'space-around' } : isMediumScreen ? { justifyContent: 'space-between', width: '70%' } : {}}>
                                     {menuItems.map((item, index) => (
                                         <NextLink
                                             key={index}
@@ -167,9 +167,18 @@ const NavBar = () => {
                             <Typography marginLeft="6px" className='app-name'>LexyStore</Typography>
                         </NextLink>
 
-                        <IconButton>
-                            <CartIcon />
-                        </IconButton>
+                        <Stack direction='row'>
+                            <IconButton>
+                                <CartIcon color={theme.palette.mode === "dark" ? colors.base[0] : colors.base[600]} />
+                            </IconButton>
+                            <IconButton onClick={colorMode.toggleColorMode}>
+                                {theme.palette.mode === "dark" ? (
+                                    <DarkModeOutlinedIcon />
+                                ) : (
+                                    <LightModeOutlinedIcon />
+                                )}
+                            </IconButton>
+                        </Stack>
                     </div>
 
                     <Paper

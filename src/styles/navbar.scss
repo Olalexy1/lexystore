@@ -18,17 +18,20 @@
         align-items: center;
     }
 
+    .nav-items-container {
+        display: flex;
+        flex: 1;
+    }
+
     .nav-items {
         list-style-type: none;
         display: flex;
-        justify-content: space-between;
         align-items: center;
         font-size: 15px;
         font-weight: 600;
-        gap: 40px;
+        width: 100%;
         font-family: Lato;
-        flex: 1;
-        border: 1px solid red;
+        // border: 1px solid red;
 
         li {
             cursor: pointer;

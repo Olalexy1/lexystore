@@ -1,0 +1,130 @@
+.home-header {
+    display: flex;
+    flex: 1;
+    // border: 1px solid red;
+    flex-direction: row;
+    align-items: center;
+    background-color: #262626;
+    color: #ffffff;
+
+    .categories-text {
+        font-weight: 700;
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+    .header-links-left,
+    .header-links-right {
+        // border: 1px solid green;
+        text-decoration: none;
+        list-style: none;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+        margin: auto;
+
+        li {
+            display: flex;
+            flex-direction: row;
+            margin-inline: auto;
+            align-items: center;
+            position: relative;
+            // border: 1px solid red;
+        }
+
+        li:hover .expand-icon {
+            transform: rotate(180deg);
+        }
+
+    }
+
+    .header-text-container {
+        padding-left: 10px;
+        width: 268px;
+        font-size: 12px;
+        // border: 1px solid red;
+
+        p {
+            font-weight: 700;
+        }
+
+        p:last-child {
+            font-weight: 400;
+            color: #C4C4C4;
+        }
+    }
+
+    .header-links-centre {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex: 1;
+        // border: 1px solid red;
+    }
+
+    ul li {
+        text-decoration: none;
+        display: inline-block;
+        transition: all ease 0.3s;
+    }
+
+    /* submenu style */
+    ul #submenu1,
+    #submenu2 {
+        position: absolute;
+        width: 200px;
+        box-shadow: 0 10px 15px #00000020;
+        // margin-top: -100px;
+        opacity: 0;
+        z-index: -999;
+        transition: all ease 0.5s;
+    }
+
+    ul li:hover #submenu1 {
+        z-index: 9999;
+        opacity: 1;
+        margin-top: 228px;
+        border-radius: 8px;
+    }
+
+    ul li:hover #submenu2 {
+        z-index: 9999;
+        opacity: 1;
+        margin-top: 228px;
+        border-radius: 8px;
+    }
+
+    ul .submenu li {
+        margin: 0;
+        width: 100%;
+    }
+
+    ul .submenu li {
+        padding: 15px 20px;
+        display: inline-block;
+        width: 100%;
+    }
+
+}
+
+
+.home-sub-header {
+    display: flex;
+    margin-top: 10px;
+
+    .sub-header-container {
+        display: flex;
+        flex: 1;
+        text-decoration: none;
+        list-style: none;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}

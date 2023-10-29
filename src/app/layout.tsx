@@ -6,6 +6,9 @@ import { ColorModeContext, useMode } from '@/theme';
 import '../styles/globals.scss';
 import '../styles/home.scss';
 import '../styles/navbar.scss';
+import '../styles/homeHeader.scss';
+import '../styles/hero.scss';
+
 import NavBar from '@/components/NavBar';
 
 // const inter = Inter({ subsets: ['latin'] });

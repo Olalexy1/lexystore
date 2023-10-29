@@ -1,0 +1,77 @@
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    // border: 1px solid red;
+    position: relative;
+
+    .hero-img {
+        height: auto;
+        object-fit: cover;
+    }
+
+    .deal-container {
+        position: absolute;
+        z-index: 9;
+        top: 155px;
+        left: 435px;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        div:first-child {
+            padding: 36px 30px;
+            background-color: #fff;
+            color: #262626;
+            padding: 30px 36px;
+
+            p:last-child {
+                color: #ff2e00;
+                text-align: center;
+            }
+        }
+
+        div:last-child {
+            background-color: #262626;
+            display: flex;
+            width: 100%;
+            padding-block: 10px;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-size: 14px;
+                color: #fff;
+            }
+        }
+    }
+
+    .hero-text-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        background-color: #96C9FF;
+        color: #ffffff;
+
+        h3 {
+            font-size: 32px;
+            line-height: 50px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 28px;
+            font-weight: 500;
+        }
+
+        .hero-icon-button {
+            padding: 16px 64px;
+            background-color: #4172DC;
+        }
+    }
+}

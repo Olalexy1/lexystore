@@ -160,6 +160,9 @@ export const themeSettings = (mode: PaletteMode) => {
                     background: {
                         default: colors.base[800],
                     },
+                    icons: {
+                        main: colors.base[0]
+                    }
                 }
                 : {
                     // palette values for light mode
@@ -177,6 +180,9 @@ export const themeSettings = (mode: PaletteMode) => {
                     background: {
                         default: colors.base[50],
                     },
+                    icons: {
+                        main: colors.base[900]
+                    }
                 }),
         },
     };
